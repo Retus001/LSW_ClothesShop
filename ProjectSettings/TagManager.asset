@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Clothes
+  - PriceTag
   layers:
   - Default
   - TransparentFX
@@ -46,4 +48,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1443067751
+    locked: 0
+  - name: UI
+    uniqueID: 1690308587
     locked: 0
