@@ -26,6 +26,7 @@ public class CameraBehaviour : MonoBehaviour
     void Start()
     {
         DOTween.Init();
+        UpdateCamPosition();
     }
 
     public void UpdateCamPosition()

@@ -6,7 +6,9 @@ using UnityEngine;
 public enum PoolObjectType
 {
     AudioClip,
-    IGPopupSmall
+    IGPopupSmall,
+    DialogueOption,
+    InteractionPrompt
 }
 
 [Serializable]

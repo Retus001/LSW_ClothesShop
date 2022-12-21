@@ -41,6 +41,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
         else
         {
+            Debug.Log("Found duplicate singleton of type " + this.GetType() + ". Destroying " + gameObject.name);
             Destroy(gameObject);
         }
     }

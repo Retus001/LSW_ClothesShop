@@ -35,10 +35,6 @@ public class UIManager : Singleton<UIManager>
     // Prefabs
     public GameObject clothingPreview_pfb;
 
-    [HideInInspector]
-    public bool hoverable = false;
-    private bool pointerHovered = false;
-
     void Start()
     {
         m_storageWindow.SetActive(false);
@@ -50,7 +46,6 @@ public class UIManager : Singleton<UIManager>
     public void OpenStorageWindow(ClothingStorage _storage)
     {
         m_storageWindow.SetActive(true);
-        hoverable = true;
 
         // Setup close window button
         closeStorageWindow_btn.onClick.RemoveAllListeners();
@@ -69,10 +64,14 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    public void OpenInventoryWindow()
+    {
+
+    }
+
     private void CloseWindow(GameObject _window)
     {
         _window.SetActive(false);
-        hoverable = false;
     }
 
     public Sprite GetClothingTypeIcon(ClothingType _type)

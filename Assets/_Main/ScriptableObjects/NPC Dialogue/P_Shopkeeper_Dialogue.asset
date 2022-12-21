@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30be78aad53401d48a4e7bade029b097, type: 3}
+  m_Name: P_Shopkeeper_Dialogue
+  m_EditorClassIdentifier: 
+  dialogues:
+  - dialogueType: 0
+    dialogueOptions:
+    - Welcome to my shop! Have a look around and if you find something you like bring
+      it back here.
+  - dialogueType: 9
+    dialogueOptions:
+    - What can I do for you?
+    - Yes?
+    - Find anything you like?
+  - dialogueType: 1
+    dialogueOptions:
+    - Almost Christmas huh...
+    - I designed all clothes here myself you know, took me a good couple of days.
+    - It's getting cold outside, should probably install a heater or something...
+    - I'm getting sleepy here, think you could man the shop for a bit? hahaha just
+      kidding... *yawn*
+    - Did I mention I have amnesia?
+  - dialogueType: 2
+    dialogueOptions:
+    - 'That''ll be '
+  - dialogueType: 3
+    dialogueOptions:
+    - Get your items from the racks first, then bring them here.
+  - dialogueType: 4
+    dialogueOptions:
+    - '"Card declined"'
+  - dialogueType: 5
+    dialogueOptions:
+    - Thank you for buying at Steve's!
+  - dialogueType: 6
+    dialogueOptions:
+    - Let's see what you have
+  - dialogueType: 7
+    dialogueOptions:
+    - Don't have anything to sell?
+    - What you're currently wearing? Think I'll pass
+    - Got invisible items in your bag?
+  - dialogueType: 8
+    dialogueOptions:
+    - Always happy to buy quality items!
+    - Didn't you just buy this from me?
+    - Deal

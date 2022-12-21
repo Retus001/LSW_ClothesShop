@@ -14,7 +14,6 @@ public class ClothingStorage : MonoBehaviour
     private GameObject popUpObj;
 
     private bool previewingStorage = false;
-    private bool storageOpen = false;
 
     private void OnEnable()
     {
@@ -62,26 +61,30 @@ public class ClothingStorage : MonoBehaviour
 
     public void OpenStorage()
     {
-        storageOpen = true;
-
         HideStorageData();
 
         // Override main camera and set size
         mainCam.m_overrideTarget = m_camTarget;
         mainCam.m_override = true;
         mainCam.SetCamSize(3);
+        mainCam.UpdateCamPosition();
 
         // Open storage window and setup UI
         UIManager.Instance.OpenStorageWindow(this);
+
+        // Disable player movement
+        InputManager.Instance.inputEnabled = false;
     }
 
     public void CloseStorage()
     {
-        storageOpen = false;
-
         ShowStorageData();
 
         mainCam.m_override = false;
         mainCam.ResetCamSize();
+        mainCam.UpdateCamPosition();
+
+        // Re-Enable player movement
+        InputManager.Instance.inputEnabled = true;
     }
 }
