@@ -6,12 +6,16 @@ public class InputManager : Singleton<InputManager>
 {
     public bool inputEnabled = true;
 
-    [SerializeField]
-    private Vector2 movementDirection;
+    [HideInInspector]
+    public Vector2 movementDirection;
 
     // Movement input event
     public delegate void Movement(Vector2 moveDir);
     public static event Movement OnMove;
+
+    // Main menu key event
+    public delegate void MainMenuPress();
+    public static event MainMenuPress OnMainMenuPress;
 
     // Interaction input event
     //public delegate void Interact();
@@ -30,6 +34,10 @@ public class InputManager : Singleton<InputManager>
             // Get Interaction Input
             //if(Input.GetButtonDown("Interact"))
             //    if (OnInteract != null) OnInteract();
+
+            // Get Main menu input
+            if (Input.GetButtonDown("Cancel"))
+                if (OnMainMenuPress != null) OnMainMenuPress();
         }
     }
 }

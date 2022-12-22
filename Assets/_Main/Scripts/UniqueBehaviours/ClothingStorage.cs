@@ -66,8 +66,7 @@ public class ClothingStorage : MonoBehaviour
         // Override main camera and set size
         mainCam.m_overrideTarget = m_camTarget;
         mainCam.m_override = true;
-        mainCam.SetCamSize(3);
-        mainCam.UpdateCamPosition();
+        mainCam.SetCamSize(5);
 
         // Open storage window and setup UI
         UIManager.Instance.OpenStorageWindow(this);
@@ -82,7 +81,6 @@ public class ClothingStorage : MonoBehaviour
 
         mainCam.m_override = false;
         mainCam.ResetCamSize();
-        mainCam.UpdateCamPosition();
 
         // Re-Enable player movement
         InputManager.Instance.inputEnabled = true;

@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     private float oldTime;
 
     // Player moving event
-    public delegate void PlayerMoving();
-    public static event PlayerMoving OnPlayerMoving;
+    //public delegate void PlayerMoving();
+    //public static event PlayerMoving OnPlayerMoving;
 
     private void OnEnable()
     {
@@ -37,21 +37,18 @@ public class PlayerController : MonoBehaviour
         // Set camera target position based on movement direction
         if(_dir != Vector2.zero)
         {
-            m_camTarget.position = transform.position + new Vector3(0, 1.5f, 0) + new Vector3(_dir.x * m_camTargetOffset.x, _dir.y * m_camTargetOffset.y, 0);
+            m_camTarget.position = transform.position + new Vector3(_dir.x * m_camTargetOffset.x, m_camTargetOffset.y, 0);
         }
 
         // Handle footsteps audio
         if (_dir != Vector2.zero)
         {
-            if (Time.time >= oldTime + (m_speed / 8))
+            if (Time.time >= oldTime + (2f / m_speed))
             {
                 AudioManager.Instance.SpawnAudioSource(transform.position, AudioType.footsteps);
                 oldTime = Time.time;
             }
         }
-
-        // Trigger player moving event
-        if (OnPlayerMoving != null) OnPlayerMoving();
     }
 
     private void OnDisable()

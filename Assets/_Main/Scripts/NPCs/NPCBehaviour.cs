@@ -47,7 +47,7 @@ public class NPCBehaviour : MonoBehaviour
         interactionPrompt = PoolManager.Instance.GetPoolObject(PoolObjectType.InteractionPrompt);
         promptBtn = interactionPrompt.GetComponent<Button>();
         promptBtn.onClick.AddListener(() => Interact());
-        interactionPrompt.transform.position = transform.position + new Vector3(0, 2, 0);
+        interactionPrompt.transform.position = transform.position + new Vector3(1, 8, 0);
         interactionPrompt.SetActive(true);
     }
 

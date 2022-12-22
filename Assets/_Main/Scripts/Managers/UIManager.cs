@@ -37,6 +37,7 @@ public class UIManager : Singleton<UIManager>
     public TextMeshProUGUI m_bankBalanceDisplay_TMP;
     public TextMeshProUGUI m_cartItemCount_TMP;
     public TextMeshProUGUI m_cartItemsTotal_TMP;
+    public GameObject m_MainMenuWindow;
     public Canvas[] sidePanelCanvas;
 
     public Button closeStorageWindow_btn;
@@ -57,6 +58,7 @@ public class UIManager : Singleton<UIManager>
         InventoryManager.OnUpdateInventory += UpdateInventoryWindow;
         InventoryManager.OnUpdateCart += OpenCartWindow;
         InventoryManager.OnUpdateCart += UpdateCartWindow;
+        InputManager.OnMainMenuPress += ToggleMainMenu;
     }
 
     private void OnDisable()
@@ -65,6 +67,7 @@ public class UIManager : Singleton<UIManager>
         InventoryManager.OnUpdateInventory -= UpdateInventoryWindow;
         InventoryManager.OnUpdateCart += OpenCartWindow;
         InventoryManager.OnUpdateCart -= UpdateCartWindow;
+        InputManager.OnMainMenuPress -= ToggleMainMenu;
     }
 
     void Start()
@@ -72,6 +75,7 @@ public class UIManager : Singleton<UIManager>
         m_storageWindow.gameObject.SetActive(false);
         m_customizationWindow.gameObject.SetActive(false);
         m_priceTagWindow.gameObject.SetActive(false);
+        m_MainMenuWindow.SetActive(false);
         CloseInventoryWindow();
         CloseBankBalance();
         CloseCartWindow();
@@ -80,6 +84,11 @@ public class UIManager : Singleton<UIManager>
         {
             canvas.sortingOrder = 1;
         }
+    }
+
+    public void ToggleMainMenu()
+    {
+        m_MainMenuWindow.SetActive(!m_MainMenuWindow.activeSelf);
     }
 
     public void OpenStorageWindow(ClothingStorage _storage)

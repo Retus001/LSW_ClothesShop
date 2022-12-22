@@ -16,9 +16,6 @@ public class CameraBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        // Event Subscriptions
-        PlayerController.OnPlayerMoving += UpdateCamPosition;
-
         // References
         cam = GetComponent<Camera>();
     }
@@ -26,16 +23,23 @@ public class CameraBehaviour : MonoBehaviour
     void Start()
     {
         DOTween.Init();
-        UpdateCamPosition();
-    }
-
-    public void UpdateCamPosition()
-    {
-        transform.DOMove(new Vector3(
-            m_override? m_overrideTarget.position.x : m_target.position.x,
-            m_override ? m_overrideTarget.position.y : m_target.position.y, 
-            transform.position.z), 
-            1f / m_followSpeed);
+        Tweener followTargetTween = transform.DOMove(new Vector3(m_target.position.x, m_target.position.y, transform.position.z), 1f / m_followSpeed);
+        followTargetTween.OnUpdate(() =>
+        {
+            if (m_override)
+            {
+                if (Vector3.Distance(transform.position, m_overrideTarget.position) > 0.2f)
+                {
+                    followTargetTween.ChangeEndValue(new Vector3(m_overrideTarget.position.x, m_overrideTarget.position.y, transform.position.z), true);
+                }
+            } else
+            {
+                if (Vector3.Distance(transform.position, m_target.position) > 0.2f)
+                {
+                    followTargetTween.ChangeEndValue(new Vector3(m_target.position.x, m_target.position.y, transform.position.z), true);
+                }
+            }
+        });
     }
 
     public void SetCamSize(float _size)
@@ -45,11 +49,6 @@ public class CameraBehaviour : MonoBehaviour
 
     public void ResetCamSize()
     {
-        cam.DOOrthoSize(5, 1f);
-    }
-
-    private void OnDisable()
-    {
-        PlayerController.OnPlayerMoving -= UpdateCamPosition;
+        cam.DOOrthoSize(10, 1f);
     }
 }
