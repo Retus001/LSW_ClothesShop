@@ -66,6 +66,16 @@ public class InventoryManager : Singleton<InventoryManager>
         if (OnUpdateCart != null) OnUpdateCart();
     }
 
+    public void FinishCartPurchase()
+    {
+        ModifyMoney(-GetCartTotalCost());
+        foreach(SO_ClothingItem item in m_cartClothingItems.Values)
+        {
+            AddClothingItem(item);
+        }
+        ResetCart();
+    }
+
     public void ModifyMoney(float _amount)
     {
         m_balance += _amount;

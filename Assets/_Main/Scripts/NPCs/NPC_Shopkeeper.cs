@@ -8,12 +8,6 @@ public class NPC_Shopkeeper : NPCBehaviour
     {
         base.Interact(_dialogueIntention);
 
-        if (!known)
-        {
-            _dialogueIntention = DialogueType.GREETING;
-            known = true;
-        }
-
         string dialogueAppend = "";
 
         Debug.Log("Switching with " + _dialogueIntention);
@@ -30,15 +24,13 @@ public class NPC_Shopkeeper : NPCBehaviour
                 break;
 
             case DialogueType.PURCHASE:
-                float cartTotal = InventoryManager.Instance.GetCartTotalCost();
                 if (InventoryManager.Instance.m_cartClothingItems.Count <= 0)
                     _dialogueIntention = DialogueType.PURCHASE_MISSINGITEMS;
                 else
                 {
                     dialogueAppend = InventoryManager.Instance.GetCartTotalCost().ToString("C");
                     DialogueManager.Instance.AddDialogueOption("Confirm", () => { 
-                        Interact(DialogueType.PURCHASE_COMPLETE); 
-                        InventoryManager.Instance.ModifyMoney(cartTotal); 
+                        Interact(DialogueType.PURCHASE_COMPLETE);
                     });
                 }
                 break;
@@ -46,6 +38,8 @@ public class NPC_Shopkeeper : NPCBehaviour
             case DialogueType.PURCHASE_COMPLETE:
                 if (InventoryManager.Instance.m_balance < InventoryManager.Instance.GetCartTotalCost())
                     _dialogueIntention = DialogueType.PURCHASE_MISSINGMONEY;
+                else
+                    InventoryManager.Instance.FinishCartPurchase();
                 break;
 
             case DialogueType.SELL:

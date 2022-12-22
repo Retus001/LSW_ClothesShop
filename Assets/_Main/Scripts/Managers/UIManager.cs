@@ -173,23 +173,28 @@ public class UIManager : Singleton<UIManager>
         m_inventoryWindow.DOAnchorPosX(0, 0.5f);
         m_toggleInventoryArrow.DOLocalRotate(new Vector3(0, 0, -180), 0.5f);
         PushSidePanelToFront(0);
+
+        UpdateInventoryWindow();
     }
 
     public void UpdateInventoryWindow()
     {
-        foreach(GameObject myItem in inventoryItemsDisplayed)
+        if (inventoryOpen)
         {
-            PoolManager.Instance.ResetObjInstance(myItem, PoolObjectType.InventoryItem);
-        }
-        inventoryItemsDisplayed.Clear();
+            foreach (GameObject myItem in inventoryItemsDisplayed)
+            {
+                PoolManager.Instance.ResetObjInstance(myItem, PoolObjectType.InventoryItem);
+            }
+            inventoryItemsDisplayed.Clear();
 
-        foreach(SO_ClothingItem item in InventoryManager.Instance.m_ownedClothingItems.Values)
-        {
-            GameObject invItem = PoolManager.Instance.GetPoolObject(PoolObjectType.InventoryItem);
-            InventoryItemBehaviour invItemBehaviour = invItem.GetComponent<InventoryItemBehaviour>();
-            invItemBehaviour.SetupInventoryItem(item.itemIcon, GetClothingTypeIcon(item.itemType));
-            invItem.SetActive(true);
-            inventoryItemsDisplayed.Add(invItem);
+            foreach (SO_ClothingItem item in InventoryManager.Instance.m_ownedClothingItems.Values)
+            {
+                GameObject invItem = PoolManager.Instance.GetPoolObject(PoolObjectType.InventoryItem);
+                InventoryItemBehaviour invItemBehaviour = invItem.GetComponent<InventoryItemBehaviour>();
+                invItemBehaviour.SetupInventoryItem(item.itemIcon, GetClothingTypeIcon(item.itemType));
+                invItem.SetActive(true);
+                inventoryItemsDisplayed.Add(invItem);
+            }
         }
     }
 
@@ -210,6 +215,7 @@ public class UIManager : Singleton<UIManager>
 
     public void OpenBankBalanceWindow()
     {
+        bankOpen = true;
         m_toggleBankArrow.DOLocalRotate(new Vector3(0,0,180), 0.5f);
         m_bankBalanceWindow.DOAnchorPosX(0, 0.5f);
         PushSidePanelToFront(1);
@@ -222,6 +228,7 @@ public class UIManager : Singleton<UIManager>
 
     public void CloseBankBalance()
     {
+        bankOpen = false;
         m_toggleBankArrow.DOLocalRotate(Vector3.zero, 0.5f);
         m_bankBalanceWindow.DOAnchorPosX(500, 0.5f);
     }

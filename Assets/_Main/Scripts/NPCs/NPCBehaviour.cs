@@ -59,10 +59,16 @@ public class NPCBehaviour : MonoBehaviour
 
     public virtual void Interact(DialogueType _dialogueIntention = DialogueType.BASE)
     {
-        if(!DialogueManager.Instance.m_dialogueWindow.activeSelf)
+        if (!DialogueManager.Instance.m_dialogueWindow.activeSelf)
             DialogueManager.Instance.ShowDialogueBox(this);
 
         if(previousDialogueType != _dialogueIntention)
             DialogueManager.Instance.ClearDialogueOptions();
+
+        if (!known)
+        {
+            _dialogueIntention = DialogueType.GREETING;
+            known = true;
+        }
     }
 }
