@@ -30,22 +30,26 @@ public class NPC_Shopkeeper : NPCBehaviour
                 break;
 
             case DialogueType.PURCHASE:
-                if (InventoryManager.Instance.cartClothingItems.Count <= 0)
+                float cartTotal = InventoryManager.Instance.GetCartTotalCost();
+                if (InventoryManager.Instance.m_cartClothingItems.Count <= 0)
                     _dialogueIntention = DialogueType.PURCHASE_MISSINGITEMS;
                 else
                 {
-                    dialogueAppend = "$" + InventoryManager.Instance.GetCartTotalCost().ToString();
-                    DialogueManager.Instance.AddDialogueOption("Confirm", () => Interact(DialogueType.PURCHASE_COMPLETE));
+                    dialogueAppend = InventoryManager.Instance.GetCartTotalCost().ToString("C");
+                    DialogueManager.Instance.AddDialogueOption("Confirm", () => { 
+                        Interact(DialogueType.PURCHASE_COMPLETE); 
+                        InventoryManager.Instance.ModifyMoney(cartTotal); 
+                    });
                 }
                 break;
 
             case DialogueType.PURCHASE_COMPLETE:
-                if (InventoryManager.Instance.money < InventoryManager.Instance.GetCartTotalCost())
+                if (InventoryManager.Instance.m_balance < InventoryManager.Instance.GetCartTotalCost())
                     _dialogueIntention = DialogueType.PURCHASE_MISSINGMONEY;
                 break;
 
             case DialogueType.SELL:
-                if (InventoryManager.Instance.ownedClothingItems.Count <= 0)
+                if (InventoryManager.Instance.m_ownedClothingItems.Count <= 0)
                     _dialogueIntention = DialogueType.SELL_MISSINGITEMS;
                 else
                     DialogueManager.Instance.AddDialogueOption("Confirm", () => Interact(DialogueType.SELL_COMPLETE));

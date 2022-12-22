@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5314282441399070550}
   - component: {fileID: 5314282441399070551}
   m_Layer: 5
-  m_Name: InteracitonPrompt_pfb
+  m_Name: InteractionPrompt_pfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

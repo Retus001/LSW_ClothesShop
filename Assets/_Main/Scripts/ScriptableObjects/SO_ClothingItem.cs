@@ -18,5 +18,5 @@ public enum ClothingType
     TOP,
     BOTTOM,
     FULL,
-    FOOTWEARs
+    FOOTWEAR
 }

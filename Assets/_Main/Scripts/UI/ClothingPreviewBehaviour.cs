@@ -9,8 +9,23 @@ public class ClothingPreviewBehaviour : MonoBehaviour
     public Image m_clothingPreview;
     public TextMeshProUGUI m_clothingName_TMP;
     public GameObject m_hanger_Btn;
-    private float price;
+    public Button m_addToCart_Btn;
+    public Button m_interact_Btn;
     private Animator anim;
+    private bool showingTag = false;
+    private SO_ClothingItem itemSO;
+
+    private void OnEnable()
+    {
+        InventoryManager.OnUpdateCart += UpdatePreviewItem;
+        InventoryManager.OnUpdateInventory += UpdatePreviewItem;
+    }
+
+    private void OnDisable()
+    {
+        InventoryManager.OnUpdateCart -= UpdatePreviewItem;
+        InventoryManager.OnUpdateInventory -= UpdatePreviewItem;
+    }
 
     private void Start()
     {
@@ -18,11 +33,47 @@ public class ClothingPreviewBehaviour : MonoBehaviour
         m_hanger_Btn.SetActive(false);
     }
 
-    public void SetupClothingItem(Sprite _clothingPreview, float _cost, string _clothingName)
+    public void SetupClothingItem(SO_ClothingItem _item)
     {
-        m_clothingPreview.sprite = _clothingPreview;
-        price = _cost;
-        m_clothingName_TMP.text = _clothingName;
+        itemSO = _item;
+        //itemSO.originalStorage = _storage;
+        m_clothingPreview.sprite = _item.itemPreview;
+        m_clothingName_TMP.text = _item.itemName;
+        m_clothingName_TMP.rectTransform.sizeDelta = new Vector2(m_clothingName_TMP.preferredWidth, m_clothingName_TMP.rectTransform.sizeDelta.y);
+        m_addToCart_Btn.onClick.RemoveAllListeners();
+        m_addToCart_Btn.onClick.AddListener(() => InventoryManager.Instance.AddClothingItemToCart(_item));
+
+        UpdatePreviewItem();
+    }
+
+    public void UpdatePreviewItem()
+    {
+        foreach (SO_ClothingItem item in InventoryManager.Instance.m_ownedClothingItems.Values)
+        {
+            if (itemSO == item)
+            {
+                m_clothingName_TMP.text = "Owned";
+                m_addToCart_Btn.interactable = false;
+                m_hanger_Btn.SetActive(false);
+                m_interact_Btn.interactable = false;
+                return;
+            }
+        }
+
+        foreach (SO_ClothingItem item in InventoryManager.Instance.m_cartClothingItems.Values)
+        {
+            if (itemSO == item)
+            {
+                m_clothingName_TMP.text = "In Cart";
+                m_addToCart_Btn.interactable = false;
+                return;
+            }
+        }
+
+        // Reset item from source
+        m_clothingName_TMP.text = itemSO.itemName;
+        m_addToCart_Btn.interactable = true;
+        m_interact_Btn.interactable = true;
     }
 
     public void ClothingInteract()
@@ -39,9 +90,15 @@ public class ClothingPreviewBehaviour : MonoBehaviour
 
     public void PriceTagInteract()
     {
-        if (!UIManager.Instance.m_priceTagWindow.activeSelf)
-            UIManager.Instance.ShowPriceTag("$ " + price.ToString());
+        if (!showingTag)
+        {
+            showingTag = true;
+            UIManager.Instance.ShowPriceTag(itemSO.itemCost, itemSO.itemName);
+        }
         else
+        {
+            showingTag = false;
             UIManager.Instance.HidePriceTag();
+        }
     }
 }

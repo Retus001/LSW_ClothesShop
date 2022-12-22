@@ -8,7 +8,9 @@ public enum PoolObjectType
     AudioClip,
     IGPopupSmall,
     DialogueOption,
-    InteractionPrompt
+    InteractionPrompt,
+    CartItem,
+    InventoryItem
 }
 
 [Serializable]
