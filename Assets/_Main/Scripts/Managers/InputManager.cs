@@ -9,6 +9,8 @@ public class InputManager : Singleton<InputManager>
     [HideInInspector]
     public Vector2 movementDirection;
 
+    private Vector2 prevDir = Vector2.zero;
+
     // Movement input event
     public delegate void Movement(Vector2 moveDir);
     public static event Movement OnMove;
@@ -16,6 +18,10 @@ public class InputManager : Singleton<InputManager>
     // Main menu key event
     public delegate void MainMenuPress();
     public static event MainMenuPress OnMainMenuPress;
+
+    // Changed direction event
+    public delegate void ChangedDirection(Vector2 _newDir);
+    public static event ChangedDirection OnChangedDirection;
 
     // Interaction input event
     //public delegate void Interact();
@@ -27,6 +33,12 @@ public class InputManager : Singleton<InputManager>
         {
             // Get movement input
             movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+
+            if(prevDir != movementDirection)
+            {
+                if (OnChangedDirection != null) OnChangedDirection(movementDirection);
+                prevDir = movementDirection;
+            }
 
             // Trigger movement input event
             if (OnMove != null) OnMove(movementDirection);

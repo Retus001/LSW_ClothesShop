@@ -14,6 +14,7 @@ public class CameraBehaviour : MonoBehaviour
     // References
     private Camera cam;
     private float defaultCamSize;
+    private Vector3 targetPos;
 
     private void OnEnable()
     {
@@ -27,18 +28,11 @@ public class CameraBehaviour : MonoBehaviour
         Tweener followTargetTween = transform.DOMove(new Vector3(m_target.position.x, m_target.position.y, transform.position.z), 1f / m_followSpeed);
         followTargetTween.OnUpdate(() =>
         {
-            if (m_override)
+            targetPos = m_override ? m_overrideTarget.position : m_target.position;
+
+            if (Vector3.Distance(transform.position, targetPos) > 0.2f)
             {
-                if (Vector3.Distance(transform.position, m_overrideTarget.position) > 0.2f)
-                {
-                    followTargetTween.ChangeEndValue(new Vector3(m_overrideTarget.position.x, m_overrideTarget.position.y, transform.position.z), true);
-                }
-            } else
-            {
-                if (Vector3.Distance(transform.position, m_target.position) > 0.2f)
-                {
-                    followTargetTween.ChangeEndValue(new Vector3(m_target.position.x, m_target.position.y, transform.position.z), true);
-                }
+                followTargetTween.ChangeEndValue(new Vector3(targetPos.x, targetPos.y, transform.position.z), true);
             }
         });
 

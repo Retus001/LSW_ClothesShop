@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 58eba8e534da0574da374d6ed0287c57
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PChar_head_fwd
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 798
+        width: 283
+        height: 221
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b6526f564c92449adbed1524efbb4e
+      internalID: 1839825246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_arm_fwd
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 985
+        width: 164
+        height: 27
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011414882343c7241b948332a7caf6d0
+      internalID: -1383896907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_head_sde
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 788
+        width: 171
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87a185a2eb3a8743b7044dea87be4e3
+      internalID: -1309042618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_arm_sde
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 877
+        width: 27
+        height: 134
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d1c3f4f149cd14eb59a5244dbcba09
+      internalID: -1345087003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_forearm_sde
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 871
+        width: 28
+        height: 141
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b81b0e2b43e4546913e134c8c90117
+      internalID: -498179889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_hand_sde
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 963
+        width: 42
+        height: 49
+      alignment: 9
+      pivot: {x: 0.35, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd04a82727f4ed94ca935fe5a2c31dcf
+      internalID: -1260442713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_leg_sde
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 793
+        width: 99
+        height: 219
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb433f32daa9284c8fdfc37b7ba0408
+      internalID: -911992885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_forearm_fwd
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 941
+        width: 140
+        height: 27
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2a1a2cb0a50314db17431184a8f4b2
+      internalID: 1021201816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_hand_fwd
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 875
+        width: 54
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ebde64edca64e4882e312377e4471b
+      internalID: -1194579073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_torso_fwd
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 595
+        width: 113
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1125690c258bdcf4995cbcaf10a82ada
+      internalID: 324520467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_hips_fwd
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 624
+        width: 140
+        height: 120
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83f3e63228180e4290209f1c2a0dc92
+      internalID: -1750690081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_torso_sde
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 594
+        width: 100
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19cd089c32ec814d9b2f72dbe4bd6db
+      internalID: -1891065971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_hips_sde
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 652
+        width: 101
+        height: 118
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ce7c651ce29f6468c6c4398d80f38e
+      internalID: 1061415348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_torso_bck
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 593
+        width: 112
+        height: 181
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adf2912e201dd54bbf4c3a4cb2e0218
+      internalID: 436137544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_calf_sde
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 520
+        width: 58
+        height: 256
+      alignment: 9
+      pivot: {x: 0.68, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a1c6f6ab5a2ff4993be1c5c59d3731
+      internalID: -1275282880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_leg_fwd
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 351
+        width: 70
+        height: 220
+      alignment: 9
+      pivot: {x: 0.45, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1180e72f8eae3409c7e2561a518013
+      internalID: -771094379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_calf_fwd
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 314
+        width: 60
+        height: 256
+      alignment: 9
+      pivot: {x: 0.4, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5c1dc8b8ad76a408547e82c65c6f89
+      internalID: 566681892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_foot_fwd
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 503
+        width: 50
+        height: 65
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38740d1358407c45889dfeb8e0ff1d5
+      internalID: 735026998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_head_bck
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 346
+        width: 282
+        height: 221
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab00329d62c5e40459ce4c2a89d8743b
+      internalID: 456160133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PChar_foot_sde
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 439
+        width: 105
+        height: 63
+      alignment: 9
+      pivot: {x: 0.18, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7623d7bb59a682a40b26cf11a7e0f8b4
+      internalID: 434982612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PChar_torso_sde: -1891065971
+      LSW_CharacterSheetDirectional_12: 1230712956
+      PChar_hips_sde: 1061415348
+      LSW_CharacterSheetDirectional_16: -554972248
+      PChar_calf_sde: -1275282880
+      PChar_torso_fwd: 324520467
+      PChar_head_bck: 456160133
+      PChar_forearm_fwd: 1021201816
+      PChar_hand_fwd: -1194579073
+      PChar_calf_fwd: 566681892
+      PChar_head_fwd: 1839825246
+      PChar_hand_sde: -1260442713
+      PChar_torso_bck: 436137544
+      PChar_arm_sde: -1345087003
+      PChar_hips_fwd: -1750690081
+      PChar_forearm_sde: -498179889
+      PChar_head_sde: -1309042618
+      PChar_leg_fwd: -771094379
+      PChar_foot_sde: 434982612
+      PChar_arm_fwd: -1383896907
+      PChar_foot_fwd: 735026998
+      PChar_leg_sde: -911992885
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

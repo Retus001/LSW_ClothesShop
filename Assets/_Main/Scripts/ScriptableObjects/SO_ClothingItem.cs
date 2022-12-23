@@ -40,13 +40,13 @@ public class ClothingSprites
 {
     [Serializable]
     public struct ClothingSpriteData {
-        public Sprite sprite;
+        public Sprite[] sprite;
         public ClothingSection section;
     }
 
     public ClothingSpriteData[] spritesData;
 
-    public Sprite GetSprite(ClothingSection _section)
+    public Sprite[] GetSprite(ClothingSection _section)
     {
         foreach(ClothingSpriteData spr in spritesData)
         {
