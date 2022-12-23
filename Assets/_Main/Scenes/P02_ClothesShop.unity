@@ -5819,9 +5819,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_clothingType: 1
   m_clothingItems:
-  - {fileID: 11400000, guid: 18457854c8f0b324ba0c21c292e84353, type: 2}
-  - {fileID: 11400000, guid: b5f88c0046d7f6f4d907029c21c0ae57, type: 2}
-  - {fileID: 11400000, guid: 8ec74997c053a3846855c74f0b9ae579, type: 2}
   - {fileID: 11400000, guid: 39bda030e6c715647ba3d921a389fc59, type: 2}
   m_camTarget: {fileID: 659360105}
 --- !u!1 &693977745
