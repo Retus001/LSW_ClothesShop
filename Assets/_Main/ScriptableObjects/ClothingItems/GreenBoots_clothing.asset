@@ -21,6 +21,6 @@ MonoBehaviour:
       - {fileID: 1464492432, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
       - {fileID: -1389415011, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
       section: 8
-  itemIcon: {fileID: -1389415011, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
-  itemPreview: {fileID: -1389415011, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
+  itemIcon: {fileID: 1464492432, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
+  itemPreview: {fileID: 1464492432, guid: e82722f1f4258e44e94eee9af814e6ec, type: 3}
   itemCost: 5

@@ -186,20 +186,20 @@ public class CharacterSpriteController : Singleton<CharacterSpriteController>
             foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
                 if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
         if (setArms)
-            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
-                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.ARMS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.ARMS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.ARMS)[0];
         if (setForearms)
-            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
-                if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.FOREARMS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.FOREARMS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.FOREARMS)[0];
         if (setLegs)
-            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
-                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.LEGS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.LEGS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.LEGS)[0];
         if (setCalves)
-            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
-                if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.CALVES).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.CALVES)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.CALVES)[0];
         if (setFeet)
-            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
-                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.FEET).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.FEET)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.FEET)[0];
     }
 
     private void OnDisable()
