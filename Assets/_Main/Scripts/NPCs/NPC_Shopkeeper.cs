@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPC_Shopkeeper : NPCBehaviour
 {
+    public float buyBackRate = 0.75f;
+
     public override void Interact(DialogueType _dialogueIntention = DialogueType.BASE)
     {
         base.Interact(_dialogueIntention);
@@ -46,7 +48,12 @@ public class NPC_Shopkeeper : NPCBehaviour
                 if (InventoryManager.Instance.m_ownedClothingItems.Count <= 0)
                     _dialogueIntention = DialogueType.SELL_MISSINGITEMS;
                 else
-                    DialogueManager.Instance.AddDialogueOption("Confirm", () => Interact(DialogueType.SELL_COMPLETE));
+                {
+                    // Enable selling option on owned items and assign prices
+                    UIManager.Instance.OpenInventoryWindow();
+                    UIManager.Instance.EnableInventorySelling(buyBackRate);
+                    DialogueManager.Instance.nextDialogueType = DialogueType.SELL_COMPLETE;
+                }
                 break;
         }
 

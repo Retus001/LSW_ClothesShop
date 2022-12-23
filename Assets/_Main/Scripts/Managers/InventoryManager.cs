@@ -33,6 +33,7 @@ public class InventoryManager : Singleton<InventoryManager>
         ModifyMoney(m_startingBalance);
         ResetCart();
         ResetOwnedClothing();
+        ResetEquippedItems();
     }
 
     public void AddClothingItem(SO_ClothingItem _item)
@@ -59,7 +60,7 @@ public class InventoryManager : Singleton<InventoryManager>
         if (m_ownedClothingItems.ContainsKey(_item.itemName))
         {
             // Check if equipped item of same type exists
-            if (!m_equippedItems.ContainsKey(_item.itemType))
+            if (m_equippedItems.ContainsKey(_item.itemType))
             {
                 m_equippedItems[_item.itemType] = _item;
             } else // If no item with same type is equipped, add item to dictionary
@@ -109,11 +110,12 @@ public class InventoryManager : Singleton<InventoryManager>
     public void FinishCartPurchase()
     {
         ModifyMoney(-GetCartTotalCost());
-        foreach(SO_ClothingItem item in m_cartClothingItems.Values)
+        foreach (SO_ClothingItem item in m_cartClothingItems.Values)
         {
             AddClothingItem(item);
         }
         ResetCart();
+        UIManager.Instance.CloseCartWindow();
     }
 
     public void ModifyMoney(float _amount)

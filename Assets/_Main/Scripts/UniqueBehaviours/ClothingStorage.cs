@@ -66,7 +66,7 @@ public class ClothingStorage : MonoBehaviour
         // Override main camera and set size
         mainCam.m_overrideTarget = m_camTarget;
         mainCam.m_override = true;
-        mainCam.SetCamSize(5);
+        mainCam.SetCamSize(8);
 
         // Open storage window and setup UI
         UIManager.Instance.OpenStorageWindow(this);

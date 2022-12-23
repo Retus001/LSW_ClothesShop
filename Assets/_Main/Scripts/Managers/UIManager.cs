@@ -72,6 +72,7 @@ public class UIManager : Singleton<UIManager>
 
     private void OnEnable()
     {
+        InventoryManager.OnUpdateMoney += OpenBankBalanceWindow;
         InventoryManager.OnUpdateMoney += UpdateBankBalanceDisplay;
         InventoryManager.OnUpdateInventory += UpdateInventoryWindow;
         InventoryManager.OnUpdateCart += OpenCartWindow;
@@ -82,6 +83,7 @@ public class UIManager : Singleton<UIManager>
 
     private void OnDisable()
     {
+        InventoryManager.OnUpdateMoney -= OpenBankBalanceWindow;
         InventoryManager.OnUpdateMoney -= UpdateBankBalanceDisplay;
         InventoryManager.OnUpdateInventory -= UpdateInventoryWindow;
         InventoryManager.OnUpdateCart -= OpenCartWindow;
@@ -116,6 +118,9 @@ public class UIManager : Singleton<UIManager>
         UpdateCustomizationWindow();
         OpenCustomizationTab(ClothingType.TOP);
         m_customizationWindow.DOAnchorPosX(0, 0.5f);
+        m_inventoryWindow.DOAnchorPosX(1060, 0.5f);
+        m_bankBalanceWindow.DOAnchorPosX(600, 0.5f);
+        m_cartWindow.DOAnchorPosX(600, 0.5f);
     }
 
     public void OpenCustomizationTab(ClothingType _cType)
@@ -142,9 +147,6 @@ public class UIManager : Singleton<UIManager>
 
     public void UpdateCustomizationWindow()
     {
-        GameObject cstmItem = null;
-        CustomizationItemBehaviour cstmBehaviour = null;
-
         // Clear customization containers
         foreach (GameObject cstmObj in cstmItemsDisplayed)
             PoolManager.Instance.ResetObjInstance(cstmObj, PoolObjectType.CustomizationItem);
@@ -153,8 +155,8 @@ public class UIManager : Singleton<UIManager>
         // Fill customization contianers
         foreach(SO_ClothingItem item in InventoryManager.Instance.m_ownedClothingItems.Values)
         {
-            cstmItem = PoolManager.Instance.GetPoolObject(PoolObjectType.CustomizationItem);
-            cstmBehaviour = cstmItem.GetComponent<CustomizationItemBehaviour>();
+            GameObject cstmItem = PoolManager.Instance.GetPoolObject(PoolObjectType.CustomizationItem);
+            CustomizationItemBehaviour cstmBehaviour = cstmItem.GetComponent<CustomizationItemBehaviour>();
             cstmBehaviour.SetupCustomizationItem(item);
             switch (item.itemType)
             {
@@ -172,6 +174,9 @@ public class UIManager : Singleton<UIManager>
     public void CloseCustomizationWindow()
     {
         m_customizationWindow.DOAnchorPosX(-960, 0.5f);
+        m_inventoryWindow.DOAnchorPosX(960, 0.5f);
+        m_bankBalanceWindow.DOAnchorPosX(500, 0.5f);
+        m_cartWindow.DOAnchorPosX(500, 0.5f);
     }
 
     public void OpenStorageWindow(ClothingStorage _storage)
@@ -269,6 +274,24 @@ public class UIManager : Singleton<UIManager>
         UpdateInventoryWindow();
     }
 
+    public void EnableInventorySelling(float _buyRate)
+    {
+        foreach(GameObject invItem in inventoryItemsDisplayed)
+        {
+            InventoryItemBehaviour itemBehaviour = invItem.GetComponent<InventoryItemBehaviour>();
+            itemBehaviour.EnableSelling(_buyRate);
+        }
+    }
+
+    public void DisableInventorySelling()
+    {
+        foreach(GameObject invItem in inventoryItemsDisplayed)
+        {
+            InventoryItemBehaviour itemBehaviour = invItem.GetComponent<InventoryItemBehaviour>();
+            itemBehaviour.DisableSelling();
+        }
+    }
+
     public void UpdateInventoryWindow()
     {
         if (inventoryOpen)
@@ -283,7 +306,7 @@ public class UIManager : Singleton<UIManager>
             {
                 GameObject invItem = PoolManager.Instance.GetPoolObject(PoolObjectType.InventoryItem);
                 InventoryItemBehaviour invItemBehaviour = invItem.GetComponent<InventoryItemBehaviour>();
-                invItemBehaviour.SetupInventoryItem(item.itemIcon, GetClothingTypeIcon(item.itemType));
+                invItemBehaviour.SetupInventoryItem(item);
                 invItem.SetActive(true);
                 inventoryItemsDisplayed.Add(invItem);
             }
@@ -295,6 +318,7 @@ public class UIManager : Singleton<UIManager>
         inventoryOpen = false;
         m_toggleInventoryArrow.DOLocalRotate(new Vector3(0, 0, 180), 0.5f);
         m_inventoryWindow.DOAnchorPosX(960, 0.5f);
+        DisableInventorySelling();
     }
 
     public void ToggleBalanceWindow()

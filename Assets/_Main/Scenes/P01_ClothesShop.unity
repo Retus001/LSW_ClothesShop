@@ -1458,6 +1458,7 @@ MonoBehaviour:
     textBoxColor: {r: 0.048415814, g: 0.3920435, b: 0.6037736, a: 0.78431374}
     speakerSprite: {fileID: 21300000, guid: 97bac57332690f642891b6e85294d640, type: 3}
   m_dialogues: {fileID: 11400000, guid: 1888849d4cddee14d9a5a898b0dbfc13, type: 2}
+  buyBackRate: 0.75
 --- !u!1 &148129100
 GameObject:
   m_ObjectHideFlags: 0
@@ -12057,6 +12058,7 @@ MonoBehaviour:
   m_dialogueBoxBG: {fileID: 2113836274}
   m_dialogueOptionsContainer: {fileID: 355758277}
   m_dialogueInteract_Btn: {fileID: 715012101}
+  nextDialogueType: 9
 --- !u!114 &1714910891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13143,7 +13145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 175
-    m_Right: 0
+    m_Right: 150
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0

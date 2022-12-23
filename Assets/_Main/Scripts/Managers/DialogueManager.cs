@@ -15,11 +15,14 @@ public class DialogueManager : Singleton<DialogueManager>
     public Transform m_dialogueOptionsContainer;
     public Button m_dialogueInteract_Btn;
 
+    [HideInInspector]
+    public DialogueType nextDialogueType = DialogueType.BASE;
+
     private NPCBehaviour m_currentSpeaker;
     private Dictionary<string, GameObject> dialogueOptions = new Dictionary<string, GameObject>();
     private float speechSpeed = 1;
     private bool speaking = false;
-
+    
     private void Start()
     {
         m_dialogueWindow.SetActive(false);
@@ -96,8 +99,12 @@ public class DialogueManager : Singleton<DialogueManager>
             StopAllCoroutines();
             m_dialogue_TMP.maxVisibleCharacters = m_dialogue_TMP.text.Length;
             speaking = false;
-        } else
-            m_currentSpeaker.Interact();
+        }
+        else
+        {
+            m_currentSpeaker.Interact(nextDialogueType);
+            nextDialogueType = DialogueType.BASE;
+        }
     }
 
     private IEnumerator Typewriter()

@@ -9,7 +9,7 @@ public class CustomizationItemBehaviour : MonoBehaviour
     public GameObject m_itemSelectedGraphic;
     public bool m_itemSelected;
 
-    private SO_ClothingItem itemSO;
+    public SO_ClothingItem itemSO;
 
     public void SetupCustomizationItem(SO_ClothingItem _item)
     {
