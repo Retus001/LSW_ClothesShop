@@ -10,7 +10,8 @@ public enum PoolObjectType
     DialogueOption,
     InteractionPrompt,
     CartItem,
-    InventoryItem
+    InventoryItem,
+    CustomizationItem
 }
 
 [Serializable]

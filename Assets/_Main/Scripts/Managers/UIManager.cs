@@ -21,28 +21,45 @@ public class UIManager : Singleton<UIManager>
 
     // References
     public Sprite m_missingSprite;
-    public TextMeshProUGUI m_priceTag_TMP;
-    public TextMeshProUGUI m_priceTagItemName_TMP;
 
-    public RectTransform m_storageWindow;
-    public Transform m_clothingItemsContainer;
-    public RectTransform m_customizationWindow;
-    public RectTransform m_inventoryWindow;
-    public RectTransform m_toggleInventoryArrow;
-    public RectTransform m_cartWindow;
-    public RectTransform m_toggleCartArrow;
-    public RectTransform m_priceTagWindow;
-    public RectTransform m_bankBalanceWindow;
-    public RectTransform m_toggleBankArrow;
-    public TextMeshProUGUI m_bankBalanceDisplay_TMP;
-    public TextMeshProUGUI m_cartItemCount_TMP;
-    public TextMeshProUGUI m_cartItemsTotal_TMP;
+    [Header("Main")]
     public GameObject m_MainMenuWindow;
     public Canvas[] sidePanelCanvas;
 
+    [Header ("Storage")]
+    public RectTransform m_storageWindow;
+    public Transform m_clothingItemsContainer;
+    public RectTransform m_priceTagWindow;
     public Button closeStorageWindow_btn;
+    public TextMeshProUGUI m_priceTag_TMP;
+    public TextMeshProUGUI m_priceTagItemName_TMP;
+
+    [Header("Customization")]
+    public RectTransform m_customizationWindow;
+    public RectTransform[] m_customizationPanels;
+    public Transform m_cstmTopsContainer;
+    public Transform m_cstmBottomsContainer;
+    public Transform m_cstmOnePiecesContainer;
+    public Transform m_cstmFootwearContainer;
+    public Transform m_cstmOvertopsContainer;
+
+    [Header("Inventory")]
+    public RectTransform m_inventoryWindow;
+    public RectTransform m_toggleInventoryArrow;
+
+    [Header("Shopping Cart")]
+    public RectTransform m_cartWindow;
+    public RectTransform m_toggleCartArrow;
+    public TextMeshProUGUI m_cartItemCount_TMP;
+    public TextMeshProUGUI m_cartItemsTotal_TMP;
+
+    [Header("Bank")]
+    public RectTransform m_bankBalanceWindow;
+    public RectTransform m_toggleBankArrow;
+    public TextMeshProUGUI m_bankBalanceDisplay_TMP;
 
     // Prefabs
+    [Header("Prefabs")]
     public GameObject clothingPreview_pfb;
 
     private bool inventoryOpen = false;
@@ -51,6 +68,7 @@ public class UIManager : Singleton<UIManager>
 
     private List<GameObject> cartItemsDisplayed = new List<GameObject>();
     private List<GameObject> inventoryItemsDisplayed = new List<GameObject>();
+    private List<GameObject> cstmItemsDisplayed = new List<GameObject>();
 
     private void OnEnable()
     {
@@ -58,6 +76,7 @@ public class UIManager : Singleton<UIManager>
         InventoryManager.OnUpdateInventory += UpdateInventoryWindow;
         InventoryManager.OnUpdateCart += OpenCartWindow;
         InventoryManager.OnUpdateCart += UpdateCartWindow;
+        InventoryManager.OnUpdateEquipped += UpdateCustomizationWindow;
         InputManager.OnMainMenuPress += ToggleMainMenu;
     }
 
@@ -65,17 +84,18 @@ public class UIManager : Singleton<UIManager>
     {
         InventoryManager.OnUpdateMoney -= UpdateBankBalanceDisplay;
         InventoryManager.OnUpdateInventory -= UpdateInventoryWindow;
-        InventoryManager.OnUpdateCart += OpenCartWindow;
+        InventoryManager.OnUpdateCart -= OpenCartWindow;
         InventoryManager.OnUpdateCart -= UpdateCartWindow;
+        InventoryManager.OnUpdateEquipped -= UpdateCustomizationWindow;
         InputManager.OnMainMenuPress -= ToggleMainMenu;
     }
 
     void Start()
     {
         m_storageWindow.gameObject.SetActive(false);
-        m_customizationWindow.gameObject.SetActive(false);
         m_priceTagWindow.gameObject.SetActive(false);
         m_MainMenuWindow.SetActive(false);
+        CloseCustomizationWindow();
         CloseInventoryWindow();
         CloseBankBalance();
         CloseCartWindow();
@@ -89,6 +109,69 @@ public class UIManager : Singleton<UIManager>
     public void ToggleMainMenu()
     {
         m_MainMenuWindow.SetActive(!m_MainMenuWindow.activeSelf);
+    }
+
+    public void OpenCustomizationMenu()
+    {
+        UpdateCustomizationWindow();
+        OpenCustomizationTab(ClothingType.TOP);
+        m_customizationWindow.DOAnchorPosX(0, 0.5f);
+    }
+
+    public void OpenCustomizationTab(ClothingType _cType)
+    {
+        for(int i = 0; i < m_customizationPanels.Length; i++)
+        {
+            if (i == (int)_cType)
+                m_customizationPanels[i].DOAnchorPosX(0, 0.5f);
+            else
+                m_customizationPanels[i].DOAnchorPosX(-860, 0.5f);
+        }
+    }
+
+    public void OpenCustomizationTab(int _tabIndex)
+    {
+        for (int i = 0; i < m_customizationPanels.Length; i++)
+        {
+            if (i == _tabIndex)
+                m_customizationPanels[i].DOAnchorPosX(0, 0.5f);
+            else
+                m_customizationPanels[i].DOAnchorPosX(-860, 0.5f);
+        }
+    }
+
+    public void UpdateCustomizationWindow()
+    {
+        GameObject cstmItem = null;
+        CustomizationItemBehaviour cstmBehaviour = null;
+
+        // Clear customization containers
+        foreach (GameObject cstmObj in cstmItemsDisplayed)
+            PoolManager.Instance.ResetObjInstance(cstmObj, PoolObjectType.CustomizationItem);
+        cstmItemsDisplayed.Clear();
+
+        // Fill customization contianers
+        foreach(SO_ClothingItem item in InventoryManager.Instance.m_ownedClothingItems.Values)
+        {
+            cstmItem = PoolManager.Instance.GetPoolObject(PoolObjectType.CustomizationItem);
+            cstmBehaviour = cstmItem.GetComponent<CustomizationItemBehaviour>();
+            cstmBehaviour.SetupCustomizationItem(item);
+            switch (item.itemType)
+            {
+                case ClothingType.TOP: cstmItem.transform.SetParent(m_cstmTopsContainer); break;
+                case ClothingType.BOTTOM: cstmItem.transform.SetParent(m_cstmBottomsContainer); break;
+                case ClothingType.FULL: cstmItem.transform.SetParent(m_cstmOnePiecesContainer); break;
+                case ClothingType.FOOTWEAR: cstmItem.transform.SetParent(m_cstmFootwearContainer); break;
+                case ClothingType.OVERTOP: cstmItem.transform.SetParent(m_cstmOvertopsContainer); break;
+            }
+            cstmItem.SetActive(true);
+            cstmItemsDisplayed.Add(cstmItem);
+        }
+    }
+
+    public void CloseCustomizationWindow()
+    {
+        m_customizationWindow.DOAnchorPosX(-960, 0.5f);
     }
 
     public void OpenStorageWindow(ClothingStorage _storage)
@@ -136,7 +219,7 @@ public class UIManager : Singleton<UIManager>
         cartOpen = true;
         m_cartWindow.gameObject.SetActive(true);
         m_cartWindow.DOAnchorPosX(0, 0.5f);
-        m_toggleCartArrow.DOLocalRotate(new Vector3(0, 0, -180), 0.5f);
+        m_toggleCartArrow.DOLocalRotate(Vector3.zero, 0.5f);
         PushSidePanelToFront(2);
     }
 
@@ -165,7 +248,7 @@ public class UIManager : Singleton<UIManager>
     {
         cartOpen = false;
         m_cartWindow.DOAnchorPosX(500, 0.5f);
-        m_toggleCartArrow.DOLocalRotate(Vector3.zero, 0.5f);
+        m_toggleCartArrow.DOLocalRotate(new Vector3(0, 0, 180), 0.5f);
     }
 
     public void ToggleInventoryWindow()
@@ -180,7 +263,7 @@ public class UIManager : Singleton<UIManager>
     {
         inventoryOpen = true;
         m_inventoryWindow.DOAnchorPosX(0, 0.5f);
-        m_toggleInventoryArrow.DOLocalRotate(new Vector3(0, 0, -180), 0.5f);
+        m_toggleInventoryArrow.DOLocalRotate(Vector3.zero, 0.5f);
         PushSidePanelToFront(0);
 
         UpdateInventoryWindow();
@@ -210,7 +293,7 @@ public class UIManager : Singleton<UIManager>
     public void CloseInventoryWindow()
     {
         inventoryOpen = false;
-        m_toggleInventoryArrow.DOLocalRotate(Vector3.zero, 0.5f);
+        m_toggleInventoryArrow.DOLocalRotate(new Vector3(0, 0, 180), 0.5f);
         m_inventoryWindow.DOAnchorPosX(960, 0.5f);
     }
 
@@ -225,7 +308,7 @@ public class UIManager : Singleton<UIManager>
     public void OpenBankBalanceWindow()
     {
         bankOpen = true;
-        m_toggleBankArrow.DOLocalRotate(new Vector3(0,0,180), 0.5f);
+        m_toggleBankArrow.DOLocalRotate(Vector3.zero, 0.5f);
         m_bankBalanceWindow.DOAnchorPosX(0, 0.5f);
         PushSidePanelToFront(1);
     }
@@ -238,7 +321,7 @@ public class UIManager : Singleton<UIManager>
     public void CloseBankBalance()
     {
         bankOpen = false;
-        m_toggleBankArrow.DOLocalRotate(Vector3.zero, 0.5f);
+        m_toggleBankArrow.DOLocalRotate(new Vector3(0, 0, 180), 0.5f);
         m_bankBalanceWindow.DOAnchorPosX(500, 0.5f);
     }
 

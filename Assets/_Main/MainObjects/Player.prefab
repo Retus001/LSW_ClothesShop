@@ -578,14 +578,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308214619114742192}
-  m_LocalRotation: {x: -0, y: -0, z: 0.295622, w: 0.955305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.00000005960464, y: 0.00000005960464, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1308214619273924216}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 34.39}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1308214619114742198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308214619273924217}
-  m_LocalRotation: {x: -0, y: -0, z: 0.41291577, w: 0.9107692}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6350423, w: 0.7724774}
   m_LocalPosition: {x: 1.342, y: -0.017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -703,7 +703,7 @@ Transform:
   - {fileID: 1308214619114742199}
   m_Father: {fileID: 1308214618212084826}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 78.846}
 --- !u!1 &1308214619337917118
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 1308214619554444163}
   - component: {fileID: 1308214619554444162}
   - component: {fileID: 1308214619554444161}
+  - component: {fileID: 8366132250393716513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -873,9 +874,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9395aa4fe44564c8bbd0a32090e1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 3
+  m_speed: 4
   m_camTargetOffset: {x: 1.5, y: 9}
   m_camTarget: {fileID: 1308214619873468452}
+--- !u!114 &8366132250393716513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308214619554444156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911f9a9a498774c42a3f6e2cfe44eea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_head_spr: {fileID: 4130566205921808512}
+  m_torso_spr: {fileID: 6674142061688208272}
+  m_hips_spr: {fileID: 5830517322626581970}
+  m_arms_spr:
+  - {fileID: 2278096184391869734}
+  - {fileID: 3789565103043414764}
+  m_forearms_spr:
+  - {fileID: 1308214619566393110}
+  - {fileID: 6629454849964492647}
+  m_hands_spr:
+  - {fileID: 1308214619114742198}
+  - {fileID: 3265125327699051027}
+  m_legs_spr:
+  - {fileID: 2152643676829852834}
+  - {fileID: 3500087899621603109}
+  m_calves_spr:
+  - {fileID: 9081845275278725927}
+  - {fileID: 6143447652858106052}
+  m_feet_spr:
+  - {fileID: 2842400835257517864}
+  - {fileID: 6648426759914988367}
+  defaultSprites:
+    spritesData:
+    - sprite: {fileID: -2008566067, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 0
+    - sprite: {fileID: 798666047, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 1
+    - sprite: {fileID: 1587831919, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 2
+    - sprite: {fileID: -1599537917, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 3
+    - sprite: {fileID: -1163472869, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 4
+    - sprite: {fileID: 1368064739, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 5
+    - sprite: {fileID: -1458751504, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 6
+    - sprite: {fileID: 974794642, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 7
+    - sprite: {fileID: -1231176745, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
+      section: 8
 --- !u!1 &1308214619566393104
 GameObject:
   m_ObjectHideFlags: 0

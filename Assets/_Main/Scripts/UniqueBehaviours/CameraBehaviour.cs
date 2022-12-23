@@ -13,6 +13,7 @@ public class CameraBehaviour : MonoBehaviour
 
     // References
     private Camera cam;
+    private float defaultCamSize;
 
     private void OnEnable()
     {
@@ -40,6 +41,8 @@ public class CameraBehaviour : MonoBehaviour
                 }
             }
         });
+
+        defaultCamSize = cam.orthographicSize;
     }
 
     public void SetCamSize(float _size)
@@ -49,6 +52,6 @@ public class CameraBehaviour : MonoBehaviour
 
     public void ResetCamSize()
     {
-        cam.DOOrthoSize(10, 1f);
+        cam.DOOrthoSize(defaultCamSize, 1f);
     }
 }

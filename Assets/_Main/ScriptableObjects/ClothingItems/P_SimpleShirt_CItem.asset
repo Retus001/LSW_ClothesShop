@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Simple Shirt
   itemType: 1
-  itemSprite: {fileID: 0}
+  itemSprites:
+    spritesData:
+    - sprite: {fileID: 21300000, guid: da2cde0e9b065024cb138129f307a40a, type: 3}
+      section: 1
   itemIcon: {fileID: 21300000, guid: 7402ce760e4aa634e9f4c659a2b03623, type: 3}
   itemPreview: {fileID: 21300000, guid: da2cde0e9b065024cb138129f307a40a, type: 3}
   itemCost: 20

@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PPCharSS_Calf
+      name: PCharSS_Calf
       rect:
         serializedVersion: 2
         x: 342
@@ -303,7 +303,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PPCharSS_Calf: 974794642
+      PCharSS_Calf: 974794642
       PCharSS_Leg: -1458751504
       PCharSS_Torso: 798666047
       PCharSS_Arm: -1599537917

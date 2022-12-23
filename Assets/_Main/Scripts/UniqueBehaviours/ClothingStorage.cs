@@ -47,7 +47,7 @@ public class ClothingStorage : MonoBehaviour
         PopUpBehaviour popUp = popUpObj.GetComponent<PopUpBehaviour>();
 
         popUp.buildPopUp(m_clothingType, this);
-        popUpObj.transform.position = transform.position;
+        popUpObj.transform.position = transform.position + (Vector3.up * 5f);
         popUpObj.SetActive(true);
     }
 
