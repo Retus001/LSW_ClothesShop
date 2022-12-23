@@ -46,7 +46,7 @@ public class SpriteRendererBundle
     public ClothingSection section;
 }
 
-public class CharacterSpriteController : MonoBehaviour
+public class CharacterSpriteController : Singleton<CharacterSpriteController>
 {
     public SpriteRendererBundle[] m_spriteRenderers;
 
@@ -155,6 +155,51 @@ public class CharacterSpriteController : MonoBehaviour
         // Asign overtop mask to torso sprite
 
         UpdateSpritesDirection(Vector2.down);
+    }
+
+    public SpriteRendererBundle GetSpriteRenderers(ClothingSection _section)
+    {
+        foreach(SpriteRendererBundle rendBundle in m_spriteRenderers)
+        {
+            if (rendBundle.section == _section) return rendBundle;
+        }
+
+        return null;
+    }
+
+    public void SetTemporaryItem(SO_ClothingItem _item)
+    {
+        bool setTorso = false, setHips = false, setLegs = false, setCalves = false, setArms = false, setForearms = false, setFeet = false;
+
+        switch (_item.itemType)
+        {
+            case ClothingType.TOP: setTorso = true; setArms = true; setForearms = true; break;
+            case ClothingType.BOTTOM: setHips = true; setLegs = true; setCalves = true; break;
+            case ClothingType.FULL: setTorso = true; setArms = true; setForearms = true; setHips = true; setLegs = true; setCalves = true; break;
+            case ClothingType.FOOTWEAR: setFeet = true; break;
+        }
+
+        if (setTorso)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+        if (setHips)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
+        if (setArms)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+        if (setForearms)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
+        if (setLegs)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
+        if (setCalves)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.HIPS).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.HIPS)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.HIPS)[0];
+        if (setFeet)
+            foreach (SpriteRenderer rend in GetSpriteRenderers(ClothingSection.TORSO).renderers)
+                if (_item.itemSprites.GetSprite(ClothingSection.TORSO)[0] != null) rend.sprite = _item.itemSprites.GetSprite(ClothingSection.TORSO)[0];
     }
 
     private void OnDisable()

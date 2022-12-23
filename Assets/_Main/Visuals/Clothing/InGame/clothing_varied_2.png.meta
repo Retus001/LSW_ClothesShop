@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: c_sweatpants_hips
+      name: c_sweatpants_hips_fwd
       rect:
         serializedVersion: 2
         x: 293
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_bottoms_0_1
+      name: c_sweatpants_hips_sde
       rect:
         serializedVersion: 2
         x: 652
         y: 619
         width: 127
         height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: c_sweatpants_leg
+      name: c_sweatpants_leg_fwd
       rect:
         serializedVersion: 2
         x: 416
@@ -167,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_bottoms_0_3
+      name: c_sweatpants_leg_sde
       rect:
         serializedVersion: 2
         x: 630
         y: 378
         width: 156
         height: 227
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: c_gBoots_foot
+      name: c_greenboots_fwd
       rect:
         serializedVersion: 2
         x: 107
@@ -230,15 +230,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_bottoms_0_6
+      name: c_greenboots_sde
       rect:
         serializedVersion: 2
         x: 208
         y: 151
         width: 121
         height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.28, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: c_sweatpants_calf
+      name: c_sweatpants_calf_fwd
       rect:
         serializedVersion: 2
         x: 422
@@ -272,15 +272,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_bottoms_0_8
+      name: c_sweatpants_calf_sde
       rect:
         serializedVersion: 2
         x: 635
         y: 93
         width: 151
         height: 277
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,15 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_bottoms_0_3: -225921853
-      c_sweatpants_leg: -1455930021
-      c_gBoots_foot: -1389415011
-      c_sweatpants_calf: -1960250064
+      c_greenboots_fwd: -1389415011
+      c_sweatpants_leg_fwd: -1455930021
+      c_sweatpants_leg_sde: -225921853
+      c_greenboots_sde: 1464492432
+      c_sweatpants_hips_sde: -760780016
+      c_sweatpants_calf_sde: -377273986
       clothing_bottoms_0_4: -1221714444
-      clothing_bottoms_0_6: 1464492432
-      c_sweatpants_hips: 328015326
-      clothing_bottoms_0_8: -377273986
-      clothing_bottoms_0_1: -760780016
+      c_sweatpants_calf_fwd: -1960250064
+      c_sweatpants_hips_fwd: 328015326
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

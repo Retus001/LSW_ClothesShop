@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothing_overtop_0_0
+      name: c_pinkSweater_1
       rect:
         serializedVersion: 2
         x: 46
@@ -112,7 +112,7 @@ TextureImporter:
         width: 154
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_overtop_0_1
+      name: c_pinkSweater_0
       rect:
         serializedVersion: 2
         x: 210
@@ -133,7 +133,7 @@ TextureImporter:
         width: 195
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CSweater_Arm
+      name: c_pinkSweater_arm_fwd
       rect:
         serializedVersion: 2
         x: 506
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CSweater_Forearm
+      name: c_pinkSweater_forearm_fwd
       rect:
         serializedVersion: 2
         x: 743
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CSweater_Torso
+      name: c_pinkSweater_torso_fwd
       rect:
         serializedVersion: 2
         x: 274
@@ -209,15 +209,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_overtop_0_5
+      name: c_pinksweater_arm_sde
       rect:
         serializedVersion: 2
         x: 717
         y: 567
         width: 107
         height: 199
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,15 +230,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_overtop_0_6
+      name: c_pinkSweater_torso_sde
       rect:
         serializedVersion: 2
         x: 842
         y: 613
         width: 131
         height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_overtop_0_7
+      name: c_pinkSweater_forearm_sde
       rect:
         serializedVersion: 2
         x: 709
         y: 402
         width: 118
         height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_overtop_0_0: 1702629723
-      clothing_overtop_0_1: 1284909756
-      CSweater_Forearm: 1729705985
-      CSweater_Arm: 1843161563
-      clothing_overtop_0_6: 2135952016
-      CSweater_Torso: -2104215107
-      clothing_overtop_0_5: -1470156315
-      clothing_overtop_0_7: -1313843522
+      c_pinksweater_arm_sde: -1470156315
+      c_pinkSweater_torso_fwd: -2104215107
+      c_pinkSweater_forearm_fwd: 1729705985
+      c_pinkSweater_forearm_sde: -1313843522
+      c_pinkSweater_0: 1284909756
+      c_pinkSweater_1: 1702629723
+      c_pinkSweater_torso_sde: 2135952016
+      c_pinkSweater_arm_fwd: 1843161563
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

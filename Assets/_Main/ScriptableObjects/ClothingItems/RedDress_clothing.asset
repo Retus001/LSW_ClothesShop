@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7d8eb21a3e0d94ea1fc8fe2972001a, type: 3}
+  m_Name: RedDress_clothing
+  m_EditorClassIdentifier: 
+  itemName: Red Dress
+  itemType: 3
+  itemSprites:
+    spritesData:
+    - sprite:
+      - {fileID: -365030485, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -1842838702, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -365030485, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      section: 1
+    - sprite:
+      - {fileID: -1383896907, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      - {fileID: -1345087003, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      - {fileID: -1383896907, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      section: 3
+    - sprite:
+      - {fileID: 1021201816, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      - {fileID: -498179889, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      - {fileID: 1021201816, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      section: 4
+    - sprite:
+      - {fileID: 632918529, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: 489506271, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: 632918529, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      section: 2
+    - sprite:
+      - {fileID: -1523401871, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -798960074, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -1523401871, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      section: 6
+    - sprite:
+      - {fileID: -1531262758, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -124322972, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      - {fileID: -1531262758, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+      section: 7
+  itemIcon: {fileID: -365030485, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+  itemPreview: {fileID: -365030485, guid: 74e1e48a7a706974abaa1a4bd4285bcf, type: 3}
+  itemCost: 50

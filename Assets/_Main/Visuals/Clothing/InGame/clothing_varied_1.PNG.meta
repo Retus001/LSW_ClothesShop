@@ -104,15 +104,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothing_varied_1_0
+      name: c_pinkTop_torso_fwd
       rect:
         serializedVersion: 2
         x: 177
         y: 773
         width: 120
         height: 213
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_1
+      name: c_pinkTop_arm_fwd
       rect:
         serializedVersion: 2
         x: 347
         y: 847
         width: 193
         height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_2
+      name: c_pinkTop_torso_sde
       rect:
         serializedVersion: 2
         x: 599
-        y: 755
+        y: 756
         width: 100
         height: 226
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_3
+      name: c_pinkTop_arm_sde
       rect:
         serializedVersion: 2
         x: 713
-        y: 708
+        y: 740
         width: 82
-        height: 209
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 177
+      alignment: 9
+      pivot: {x: 0.6, y: 0.85}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_4
+      name: c_whiteSkirt_hips_fwd
       rect:
         serializedVersion: 2
         x: 206
         y: 564
         width: 210
         height: 159
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.95}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,15 +209,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_5
+      name: c_whiteSkirt_hips_sde
       rect:
         serializedVersion: 2
         x: 558
         y: 532
         width: 165
         height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,36 +230,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_6
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 353
-        width: 62
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6724f1f86e3036640968cfb38b37ae62
-      internalID: 205858096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_varied_1_7
+      name: c_whiteSkirt_leg_fwd
       rect:
         serializedVersion: 2
         x: 313
         y: 346
         width: 60
         height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_8
+      name: c_whiteSkirt_leg_sde
       rect:
         serializedVersion: 2
         x: 607
         y: 316
         width: 78
         height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,36 +272,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_9
-      rect:
-        serializedVersion: 2
-        x: 244
-        y: 40
-        width: 61
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64049954e1e8f1943ad06e64a6bad642
-      internalID: 653875133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_varied_1_10
+      name: c_whiteSkirt_calf_fwd
       rect:
         serializedVersion: 2
         x: 319
         y: 44
         width: 60
         height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4, y: 0.95}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,15 +293,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_11
+      name: c_whiteSkirt_calf_sde
       rect:
         serializedVersion: 2
         x: 606
         y: 34
         width: 60
         height: 261
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.65, y: 0.96}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -356,28 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_12
-      rect:
-        serializedVersion: 2
-        x: 859
-        y: 189
-        width: 49
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bb9a86a46e9bc240a414db50c7d8932
-      internalID: 494918048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_varied_1_13
+      name: c_sandals_fwd
       rect:
         serializedVersion: 2
         x: 914
@@ -398,15 +335,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_1_14
+      name: c_sandals_sde
       rect:
         serializedVersion: 2
         x: 859
         y: 48
         width: 109
         height: 77
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.22, y: 0.95}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -429,21 +366,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_varied_1_14: 954589527
-      clothing_varied_1_7: -251576899
-      clothing_varied_1_1: -1145962311
-      clothing_varied_1_5: -1235433353
-      clothing_varied_1_10: -345669621
-      clothing_varied_1_0: -164253056
-      clothing_varied_1_13: 349065387
-      clothing_varied_1_8: -929599173
-      clothing_varied_1_2: -2146420037
-      clothing_varied_1_4: 758334450
-      clothing_varied_1_3: -1594768456
+      c_pinkTop_torso_fwd: -164253056
+      c_sandals_fwd: 349065387
+      c_pinkTop_arm_fwd: -1145962311
+      c_whiteSkirt_leg_fwd: -251576899
+      c_sandals_sde: 954589527
+      c_pinkTop_arm_sde: -1594768456
+      c_whiteSkirt_hips_sde: -1235433353
+      c_whiteSkirt_calf_fwd: -345669621
+      c_pinkTop_torso_sde: -2146420037
       clothing_varied_1_6: 205858096
-      clothing_varied_1_11: 485971105
       clothing_varied_1_9: 653875133
+      c_whiteSkirt_hips_fwd: 758334450
+      c_whiteSkirt_leg_sde: -929599173
       clothing_varied_1_12: 494918048
+      c_whiteSkirt_calf_sde: 485971105
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

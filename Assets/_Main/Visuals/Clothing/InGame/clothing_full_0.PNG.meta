@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothing_full_0_0
+      name: c_redDress_torso_fwd
       rect:
         serializedVersion: 2
         x: 456
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_1
+      name: c_redDress_torso_sde
       rect:
         serializedVersion: 2
         x: 741
         y: 707
         width: 103
         height: 220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49451277, y: 0.034917656}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,28 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_2
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 335
-        width: 91
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e00dff49fef90e47926050ab1353e10
-      internalID: 909893975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_full_0_3
+      name: c_redDress_hips_fwd
       rect:
         serializedVersion: 2
         x: 442
@@ -188,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_4
+      name: c_redDress_hips_sde
       rect:
         serializedVersion: 2
         x: 733
         y: 540
         width: 102
         height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52771115, y: 0.8888905}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_5
+      name: c_redDress_leg_sde
       rect:
         serializedVersion: 2
         x: 908
         y: 330
         width: 97
         height: 235
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48834544, y: 0.9089363}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,28 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_6
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 70
-        width: 58
-        height: 290
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34450ab559dcb864fa9cca9dbff6a03f
-      internalID: -641914790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_full_0_7
+      name: c_redDress_calf_fwd
       rect:
         serializedVersion: 2
         x: 470
@@ -259,7 +217,7 @@ TextureImporter:
         width: 59
         height: 298
       alignment: 9
-      pivot: {x: 0.4, y: 0.92}
+      pivot: {x: 0.4000001, y: 0.94517034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_8
+      name: c_redDress_leg_fwd
       rect:
         serializedVersion: 2
         x: 603
@@ -293,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_0_9
+      name: c_redDress_calf_sde
       rect:
         serializedVersion: 2
         x: 915
         y: 23
         width: 60
         height: 293
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.67901206, y: 0.9495341}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_full_0_1: -1842838702
-      clothing_full_0_8: -1523401871
-      clothing_full_0_3: 632918529
-      clothing_full_0_0: -365030485
-      clothing_full_0_5: -798960074
-      clothing_full_0_4: 489506271
-      clothing_full_0_7: -1531262758
-      clothing_full_0_9: -124322972
+      c_redDress_calf_fwd: -1531262758
+      c_redDress_hips_fwd: 632918529
+      c_redDress_leg_fwd: -1523401871
+      c_redDress_calf_sde: -124322972
+      c_redDress_torso_fwd: -365030485
+      c_redDress_leg_sde: -798960074
+      c_redDress_hips_sde: 489506271
+      c_redDress_torso_sde: -1842838702
       clothing_full_0_6: -641914790
       clothing_full_0_2: 909893975
   spritePackingTag: 

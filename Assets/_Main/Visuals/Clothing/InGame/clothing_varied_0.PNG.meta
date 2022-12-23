@@ -104,15 +104,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothing_varied_0_0
+      name: c_blueTop_torso_fwd
       rect:
         serializedVersion: 2
         x: 122
         y: 701
         width: 148
-        height: 156
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 197
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.028685903}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,15 +125,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_1
+      name: c_blueTop_arm_fwd
       rect:
         serializedVersion: 2
         x: 299
         y: 810
-        width: 209
+        width: 180
         height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.07036201, y: 0.5155429}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_2
+      name: c_blueTop_torso_sde
       rect:
         serializedVersion: 2
         x: 627
         y: 708
         width: 137
         height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,15 +167,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_3
+      name: c_bluetop_arm_sde
       rect:
         serializedVersion: 2
         x: 787
-        y: 674
+        y: 691
         width: 63
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 174
+      alignment: 9
+      pivot: {x: 0.47074673, y: 0.89172643}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_4
+      name: c_blackSkirt_hips_fwd
       rect:
         serializedVersion: 2
         x: 186
         y: 491
         width: 170
         height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9469192}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,11 +213,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 623
-        y: 334
-        width: 128
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 467
+        width: 141
+        height: 167
+      alignment: 9
+      pivot: {x: 0.4855827, y: 0.90249467}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,15 +230,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_6
+      name: c_blueTop_forearm_sde
       rect:
         serializedVersion: 2
         x: 807
-        y: 514
+        y: 495
         width: 27
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 155
+      alignment: 9
+      pivot: {x: 0.48852086, y: 0.9163576}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_7
+      name: c_blackSkirt_calf_sde
       rect:
         serializedVersion: 2
         x: 652
         y: 38
         width: 58
         height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.63196325, y: 0.94267297}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,28 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_8
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 224
-        width: 68
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37f57084b2a276d43b3001de001c63e1
-      internalID: 328231539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_varied_0_9
+      name: c_whiteBoots_fwd
       rect:
         serializedVersion: 2
         x: 858
@@ -314,15 +293,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_varied_0_10
+      name: c_whiteBoots_sde
       rect:
         serializedVersion: 2
         x: 811
         y: 24
         width: 125
         height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.23, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,6 +309,27 @@ TextureImporter:
       bones: []
       spriteID: c0d0067fa703d434ebcfcab1389535e3
       internalID: 347046483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_blueTop_forearm_fwd
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 721
+        width: 170
+        height: 29
+      alignment: 9
+      pivot: {x: 0.07328266, y: 0.43599936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eb4f6aab98f3e4a8fd59483451e7b0
+      internalID: 1195931181
       vertices: []
       indices: 
       edges: []
@@ -345,17 +345,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_varied_0_4: 1272417621
-      clothing_varied_0_2: 110708872
-      clothing_varied_0_9: 1184213693
-      clothing_varied_0_6: -1160045278
+      c_whiteBoots_sde: 347046483
+      c_blackSkirt_calf_sde: -1736931167
+      c_blueTop_arm_fwd: -8379373
+      c_whiteBoots_fwd: 1184213693
+      c_blueTop_forearm_sde: -1160045278
       clothing_varied_0_8: 328231539
       clothing_varied_0_5: 816380958
-      clothing_varied_0_7: -1736931167
-      clothing_varied_0_3: -1233792550
-      clothing_varied_0_1: -8379373
-      clothing_varied_0_0: -425537055
-      clothing_varied_0_10: 347046483
+      c_blueTop_torso_fwd: -425537055
+      c_blueTop_torso_sde: 110708872
+      c_blackSkirt_hips_fwd: 1272417621
+      c_blueTop_forearm_fwd: 1195931181
+      c_bluetop_arm_sde: -1233792550
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

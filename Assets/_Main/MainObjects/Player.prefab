@@ -926,8 +926,8 @@ MonoBehaviour:
   defaultSprites:
     spritesData:
     - sprite:
-      - {fileID: -2008566067, guid: 3933d7c3a2b70b0459177cb13b8e27fa, type: 3}
-      - {fileID: 1238308757, guid: 9cd7ac1585b48b3408c649c145c02a7a, type: 3}
+      - {fileID: 1839825246, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
+      - {fileID: -1309042618, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
       - {fileID: 456160133, guid: 58eba8e534da0574da374d6ed0287c57, type: 3}
       section: 0
     - sprite:

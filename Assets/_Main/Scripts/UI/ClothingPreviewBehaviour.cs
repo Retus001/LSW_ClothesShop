@@ -80,12 +80,16 @@ public class ClothingPreviewBehaviour : MonoBehaviour
     {
         anim.SetTrigger("RemoveClothing");
         m_hanger_Btn.SetActive(true);
+
+        CharacterSpriteController.Instance.SetTemporaryItem(itemSO);
     }
 
     public void HangerInteract()
     {
         anim.SetTrigger("ReturnClothing");
         m_hanger_Btn.SetActive(false);
+
+        CharacterSpriteController.Instance.UpdateCurrentSprites();
     }
 
     public void PriceTagInteract()

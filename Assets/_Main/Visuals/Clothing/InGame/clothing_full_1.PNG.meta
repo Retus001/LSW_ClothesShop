@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothing_full_1_0
+      name: c_pinkDress_arm_fwd
       rect:
         serializedVersion: 2
         x: 231
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_1
+      name: c_pinkDress_torso_fwd
       rect:
         serializedVersion: 2
         x: 448
@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_2
+      name: c_pinkDress_torso_sde
       rect:
         serializedVersion: 2
         x: 806
         y: 689
         width: 102
         height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5158865, y: 0.084301814}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_3
+      name: c_pinkDress_hips_fwd
       rect:
         serializedVersion: 2
         x: 406
@@ -188,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_4
+      name: c_pinkDress_hips_sde
       rect:
         serializedVersion: 2
         x: 745
         y: 487
         width: 197
         height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55757844, y: 0.94000345}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,15 +209,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_5
+      name: c_pinkDress_arm_sde
       rect:
         serializedVersion: 2
-        x: 923
-        y: 537
+        x: 941
+        y: 561
         width: 79
-        height: 214
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 190
+      alignment: 9
+      pivot: {x: 0.44155845, y: 0.87228566}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_6
+      name: c_pinkDress_leg_fwd
       rect:
         serializedVersion: 2
         x: 511
@@ -251,15 +251,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_7
+      name: c_pinkDress_leg_sde
       rect:
         serializedVersion: 2
         x: 883
         y: 304
         width: 82
         height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4989118, y: 1.2710427}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,28 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_9
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 26
-        width: 63
-        height: 287
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16500f96e43fd8645b1f2a22d40200b4
-      internalID: 837359111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clothing_full_1_10
+      name: c_pinkDress_calf_fwd
       rect:
         serializedVersion: 2
         x: 520
@@ -314,15 +293,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clothing_full_1_12
+      name: c_pinkDress_calf_sde
       rect:
         serializedVersion: 2
         x: 868
         y: 8
         width: 60
         height: 284
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.63503623, y: 0.9431449}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,20 +324,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      clothing_full_1_3: -2087321084
-      clothing_full_1_2: -314894168
-      clothing_full_1_7: 2033480559
-      clothing_full_1_1: 746765843
-      clothing_full_1_0: 1721675306
-      clothing_full_1_6: 709977340
-      clothing_full_1_10: 1568109554
+      c_pinkDress_torso_fwd: 746765843
+      c_pinkDress_calf_fwd: 1568109554
+      c_pinkDress_leg_fwd: 709977340
+      c_pinkDress_hips_sde: -1853766980
+      c_pinkDress_torso_sde: -314894168
+      c_pinkDress_arm_fwd: 1721675306
+      c_pinkDress_calf_sde: -274447028
       clothing_full_1_13: -341325791
-      clothing_full_1_4: -1853766980
       clothing_full_1_11: -2028172306
       clothing_full_1_8: 1019393135
-      clothing_full_1_5: -724536561
-      clothing_full_1_12: -274447028
+      c_pinkDress_arm_sde: -724536561
+      c_pinkDress_hips_fwd: -2087321084
       clothing_full_1_9: 837359111
+      c_pinkDress_leg_sde: 2033480559
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

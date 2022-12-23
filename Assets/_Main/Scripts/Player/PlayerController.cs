@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         // Handle footsteps audio
         if (_dir != Vector2.zero)
         {
-            if (Time.time >= oldTime + (2f / m_speed))
+            if (Time.time >= oldTime + (4f / m_speed))
             {
                 AudioManager.Instance.SpawnAudioSource(transform.position, AudioType.footsteps);
                 oldTime = Time.time;

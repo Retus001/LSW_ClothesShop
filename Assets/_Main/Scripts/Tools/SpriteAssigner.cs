@@ -18,7 +18,8 @@ public class SpriteAssigner : MonoBehaviour
         {
             foreach (SpriteRenderer sprRend in rendBundle.renderers)
             {
-                sprRend.sprite = clothingItem.itemSprites.GetSprite(rendBundle.section)[0];
+                if(clothingItem.itemSprites.GetSprite(rendBundle.section) != null)
+                    sprRend.sprite = clothingItem.itemSprites.GetSprite(rendBundle.section)[0];
             }
         }
 
@@ -26,7 +27,8 @@ public class SpriteAssigner : MonoBehaviour
         {
             foreach (SpriteRenderer sprRend in rendBundle.renderers)
             {
-                sprRend.sprite = clothingItem.itemSprites.GetSprite(rendBundle.section)[1];
+                if (clothingItem.itemSprites.GetSprite(rendBundle.section) != null)
+                    sprRend.sprite = clothingItem.itemSprites.GetSprite(rendBundle.section)[1];
             }
         }
     }

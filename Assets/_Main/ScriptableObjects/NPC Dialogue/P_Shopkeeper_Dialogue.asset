@@ -30,6 +30,7 @@ MonoBehaviour:
     - I'm getting sleepy here, think you could man the shop for a bit? hahaha just
       kidding... *yawn*
     - Did I mention I have amnesia?
+    - You can get changed in this room behind me
   - dialogueType: 2
     dialogueOptions:
     - 'That''ll be '
@@ -42,6 +43,7 @@ MonoBehaviour:
   - dialogueType: 5
     dialogueOptions:
     - Thank you for buying at Steve's!
+    - You can try your new items in the room behind me!
   - dialogueType: 6
     dialogueOptions:
     - Let's see what you have

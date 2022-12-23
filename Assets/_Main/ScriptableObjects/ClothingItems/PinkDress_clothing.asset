@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7d8eb21a3e0d94ea1fc8fe2972001a, type: 3}
+  m_Name: PinkDress_clothing
+  m_EditorClassIdentifier: 
+  itemName: Pink Dress
+  itemType: 3
+  itemSprites:
+    spritesData:
+    - sprite:
+      - {fileID: 746765843, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: -314894168, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: 746765843, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      section: 1
+    - sprite:
+      - {fileID: 1721675306, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: -724536561, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: 1721675306, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      section: 3
+    - sprite:
+      - {fileID: 1195931181, guid: 49953622e492033409507945f016bd7e, type: 3}
+      - {fileID: -1160045278, guid: 49953622e492033409507945f016bd7e, type: 3}
+      - {fileID: 1195931181, guid: 49953622e492033409507945f016bd7e, type: 3}
+      section: 4
+    - sprite:
+      - {fileID: -2087321084, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: -1853766980, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: -2087321084, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      section: 2
+    - sprite:
+      - {fileID: 709977340, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: 2033480559, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: 709977340, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      section: 6
+    - sprite:
+      - {fileID: 1568109554, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: -274447028, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      - {fileID: 1568109554, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+      section: 7
+  itemIcon: {fileID: 746765843, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+  itemPreview: {fileID: 746765843, guid: 69bec96996e5f2c4899ff1c0c7bca4f5, type: 3}
+  itemCost: 50
